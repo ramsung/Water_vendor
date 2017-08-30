@@ -61,22 +61,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void prepareNotificationData() {
-        Notification notif = new Notification("Ram", "7358339907", "2017", "Wed", "3", "15:00");
+        Notification notif = new Notification("Ram", "7358339907", "2017", "Wed", "3", "15:00", "Kodungaiyur");
         notificationList.add(notif);
 
-        notif = new Notification("Ram", "7358339907", "2017", "Fri", "5", "14:00");
+        notif = new Notification("Ram", "7358339907", "2017", "Fri", "5", "14:00","2nd street");
         notificationList.add(notif);
 
-        notif = new Notification("Mohan", "7358339907", "2017", "Sat", "2", "13:00");
+        notif = new Notification("Mohan", "7358339907", "2017", "Sat", "2", "13:00","1st street");
         notificationList.add(notif);
 
-        notif = new Notification("Kumar", "7358339907", "2017", "Sun", "5", "12:00");
+        notif = new Notification("Kumar", "7358339907", "2017", "Sun", "5", "12:00","madras");
         notificationList.add(notif);
 
-        notif = new Notification("Ravi", "7358339907", "2017", "Wed", "1", "11:00");
+        notif = new Notification("Ravi", "7358339907", "2017", "Wed", "1", "11:00","chennai");
         notificationList.add(notif);
 
-        notif = new Notification("Chandran", "7358339907", "2017", "Wed", "9", "10:00");
+        notif = new Notification("Chandran", "7358339907", "2017", "Wed", "9", "10:00","lol");
         notificationList.add(notif);
 
 

@@ -5,12 +5,12 @@ package beyonity.water_vendor;
  */
 
 public class Notification {
-    private String cust_name, cust_phone, year, time, day, can_count;
+    private String cust_name, cust_phone, year, time, day, can_count, cust_address;
 
     public Notification() {
     }
 
-    public Notification(String cust_name, String cust_phone, String year, String day, String can_count, String time) {
+    public Notification(String cust_name, String cust_phone, String year, String day, String can_count, String time, String cust_address) {
 
         this.time = time;
         this.day = day;
@@ -18,6 +18,7 @@ public class Notification {
         this.cust_name = cust_name;
         this.cust_phone = cust_phone;
         this.can_count = can_count;
+        this.cust_address = cust_address;
     }
     public String getTime() {
         return time;
@@ -65,4 +66,13 @@ public class Notification {
     public void setCan_count(String can_count) {
         this.can_count = can_count;
     }
+    public String getCust_address() {
+        return cust_address;
+    }
+
+    public void setCust_address(String can_count) {
+        this.cust_address = can_count;
+    }
+
+
 }

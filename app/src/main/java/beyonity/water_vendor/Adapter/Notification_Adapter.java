@@ -19,7 +19,7 @@ public class Notification_Adapter extends RecyclerView.Adapter<Notification_Adap
     private List<Notification> notificationList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView cust_name, cust_phone, time, day, year, can_count;
+        public TextView cust_name, cust_phone, time, day, year, can_count, cust_address;
 
         public MyViewHolder(View view) {
             super(view);
@@ -30,6 +30,7 @@ public class Notification_Adapter extends RecyclerView.Adapter<Notification_Adap
             cust_name = (TextView) view.findViewById(R.id.cust_name);
             cust_phone = (TextView) view.findViewById(R.id.cust_phone);
             can_count = (TextView) view.findViewById(R.id.can_count);
+            cust_address = (TextView) view.findViewById(R.id.cust_address);
         }
     }
 
@@ -48,13 +49,14 @@ public class Notification_Adapter extends RecyclerView.Adapter<Notification_Adap
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Notification movie = notificationList.get(position);
-        holder.time.setText(movie.getTime());
-        holder.day.setText(movie.getDay());
-        holder.year.setText(movie.getYear());
-        holder.cust_name.setText(movie.getCust_name());
-        holder.cust_phone.setText(movie.getCust_phone());
-        holder.can_count.setText(movie.getCan_count());
+        Notification notif = notificationList.get(position);
+        holder.time.setText(notif.getTime());
+        holder.day.setText(notif.getDay());
+        holder.year.setText(notif.getYear());
+        holder.cust_name.setText(notif.getCust_name());
+        holder.cust_phone.setText(notif.getCust_phone());
+        holder.can_count.setText(notif.getCan_count());
+        holder.cust_address.setText(notif.getCust_address());
     }
 
     @Override
