@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "588516391256",
+    "firebase_url": "https://waterappandroid.firebaseio.com",
+    "project_id": "waterappandroid",
+    "storage_bucket": "waterappandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588516391256:android:8602f57a8669e5b1",
+        "android_client_info": {
+          "package_name": "beyonity.water_vendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588516391256-k356t92edb90f601klh3808af98cf9e2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "beyonity.water_vendor",
+            "certificate_hash": "67f9ad1966a8c88cc85c629a50e16c3ec773e1b5"
+          }
+        },
+        {
+          "client_id": "588516391256-h5mi7e1ifkkic4idp0nf7bi3vjfkpsed.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "beyonity.water_vendor",
+            "certificate_hash": "2883f4ba40aa4bcc4f5948f20478a02860fa8cf2"
+          }
+        },
+        {
+          "client_id": "588516391256-6m7f8a9vmtaupmsrlgrlj8qdaco7bk8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzMs2hbBrxcWlTonk1SP_dcTsm7L-0kvE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588516391256-6m7f8a9vmtaupmsrlgrlj8qdaco7bk8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

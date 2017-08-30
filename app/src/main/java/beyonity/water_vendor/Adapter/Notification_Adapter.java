@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import beyonity.water_vendor.Notification;
+import beyonity.water_vendor.untils.Notification;
 import beyonity.water_vendor.R;
 
 public class Notification_Adapter extends RecyclerView.Adapter<Notification_Adapter.MyViewHolder>{
@@ -42,7 +42,7 @@ public class Notification_Adapter extends RecyclerView.Adapter<Notification_Adap
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.notification_list, parent, false);
+                .inflate(R.layout.timeline, parent, false);
 
         return new MyViewHolder(itemView);
     }

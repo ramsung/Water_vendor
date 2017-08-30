@@ -3,4 +3,7 @@
     <string name="title_home">Notification</string>
     <string name="title_notifications">Customers</string>
     <string name="title_dashboard">Accounts</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

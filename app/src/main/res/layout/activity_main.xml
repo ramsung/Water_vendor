@@ -7,19 +7,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/grey_800"
-    tools:context="beyonity.water_vendor.MainActivity">
+    tools:context="beyonity.water_vendor.Activitys.MainActivity">
 
     <FrameLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:scrollbars="vertical"
+        <beyonity.water_vendor.customviews.CustomViewPager
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager">
+        </beyonity.water_vendor.customviews.CustomViewPager>
 
     </FrameLayout>
 
@@ -28,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/amber_50"
         app:menu="@menu/navigation" />
 
 </LinearLayout>

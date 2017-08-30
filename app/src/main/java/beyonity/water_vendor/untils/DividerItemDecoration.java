@@ -1,4 +1,4 @@
-package beyonity.water_vendor;
+package beyonity.water_vendor.untils;
 
 /**
  * Created by RK on 8/30/2017.
