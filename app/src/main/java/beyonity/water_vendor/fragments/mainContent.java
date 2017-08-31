@@ -64,7 +64,7 @@ public class mainContent extends Fragment {
 		String content = getArguments().getString(ARG_C);
 		notification = inflater.inflate(R.layout.main_notification,container,false);
 		customers = inflater.inflate(R.layout.customers_layout,container,false);
-		accounts = inflater.inflate(R.layout.account_layout,container,false);
+		accounts = inflater.inflate(R.layout.activity_acchist,container,false);
 		if(Integer.parseInt(content)==0){
 			setNotificationView(notification);
 			return notification;

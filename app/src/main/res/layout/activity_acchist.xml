@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -13,8 +14,7 @@
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabMode="scrollable">
+            android:layout_height="wrap_content">
 
             <android.support.design.widget.TabItem
                 android:id="@+id/today"
@@ -45,13 +45,26 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/nestedScrollView2">
 
-        <android.support.constraint.ConstraintLayout
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context="beyonity.water_vendor.acchist">
-
-        </android.support.constraint.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            app:backgroundTint="@color/blue_grey_700"
+            app:elevation="10dp"
+            app:fabSize="mini"
+            app:layout_anchor="@+id/nestedScrollView2"
+            app:layout_anchorGravity="bottom|right"
+            app:srcCompat="@drawable/calculator" />
     </android.support.v4.widget.NestedScrollView>
+
+
 </android.support.design.widget.CoordinatorLayout>

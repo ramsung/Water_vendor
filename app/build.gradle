@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.0'
+    dataBinding.enabled = true
     defaultConfig {
         applicationId "beyonity.water_vendor"
         minSdkVersion 21
@@ -17,6 +18,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -40,3 +42,4 @@ dependencies {
 
 }
 apply plugin: 'com.google.gms.google-services'
+

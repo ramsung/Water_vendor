@@ -42,15 +42,16 @@ public class LoginActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
-
-		if(user != null){
+	//	FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+		Intent intent = new Intent(this,MainActivity.class);
+		startActivity(intent);
+	/*	if(user != null){
 			Intent intent = new Intent(this,MainActivity.class);
 			startActivity(intent);
 		}else {
 			setContentView(R.layout.activity_login);
 			setView();
-		}
+		}*/
 
 	}
 
