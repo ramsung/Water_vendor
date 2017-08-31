@@ -1,7 +1,9 @@
 package beyonity.water_vendor.fragments;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beyonity.water_vendor.Adapter.Notification_Adapter;
+import beyonity.water_vendor.calci;
 import beyonity.water_vendor.untils.DividerItemDecoration;
 import beyonity.water_vendor.untils.Notification;
 import beyonity.water_vendor.R;
@@ -31,6 +34,7 @@ public class mainContent extends Fragment {
 	// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 	private static final String ARG_C = "content";
 	private static final String TAG = "themeFragment";
+	private FloatingActionButton fab;
 
 	// TODO: Rename and change types of parameters
 	private String mParam1;
@@ -62,19 +66,29 @@ public class mainContent extends Fragment {
 	                         Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		String content = getArguments().getString(ARG_C);
-		notification = inflater.inflate(R.layout.main_notification,container,false);
-		customers = inflater.inflate(R.layout.customers_layout,container,false);
-		accounts = inflater.inflate(R.layout.activity_acchist,container,false);
-		if(Integer.parseInt(content)==0){
+		notification = inflater.inflate(R.layout.main_notification, container, false);
+		customers = inflater.inflate(R.layout.customers_layout, container, false);
+		accounts = inflater.inflate(R.layout.activity_acchist, container, false);
+		if (Integer.parseInt(content) == 0) {
 			setNotificationView(notification);
 			return notification;
-		}else if(Integer.parseInt(content)==1){
+		} else if (Integer.parseInt(content) == 1) {
 			return customers;
 		}
+		//setAcchistView(accounts);
 		return accounts;
-
-
 	}
+	/*private void setAcchistView(accounts View accounts){
+		fab = (FloatingActionButton) view.findViewById(R.id.fab);
+		fab.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getContext(), calci.class);
+				startActivity(intent);
+			}
+		});*/
+
+
 
 	// TODO: Rename method, update argument and hook method into UI event
 	public void onButtonPressed(Uri uri) {
@@ -137,4 +151,16 @@ public class mainContent extends Fragment {
 
 		mAdapter.notifyDataSetChanged();
 	}
+
+private void setAccounts(View accounts){
+
+}
+		fab = (FloatingActionButton) setAccounts(R.id.fab);
+		fab.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getContext(), calci.class);
+				startActivity(intent);
+			}
+		});
 }
