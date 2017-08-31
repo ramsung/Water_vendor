@@ -168,6 +168,7 @@ private void setAccounts(View view){
 		});
 
 	TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
+	//tabLayout.setupWithViewPager(viewPager);
         tabLayout.addTab(tabLayout.newTab().setText("TODAY"));
         tabLayout.addTab(tabLayout.newTab().setText("WEEK"));
         tabLayout.addTab(tabLayout.newTab().setText("MONTH"));

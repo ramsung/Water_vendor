@@ -2,15 +2,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="beyonity.water_vendor.fragments.TodayFragment">
+    tools:context="beyonity.water_vendor.fragments.TodayFragment"
+    android:background="@color/grey_700">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Today"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TODAY'S INCOME"/>
+    </android.support.v7.widget.CardView>
 
 </FrameLayout>
