@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -75,7 +79,7 @@ public class mainContent extends Fragment {
 		} else if (Integer.parseInt(content) == 1) {
 			return customers;
 		}
-		//setAcchistView(accounts);
+		setAccounts(accounts);
 		return accounts;
 	}
 	/*private void setAcchistView(accounts View accounts){
@@ -152,10 +156,9 @@ public class mainContent extends Fragment {
 		mAdapter.notifyDataSetChanged();
 	}
 
-private void setAccounts(View accounts){
+private void setAccounts(View view){
 
-}
-		fab = (FloatingActionButton) setAccounts(R.id.fab);
+		fab = (FloatingActionButton) view.findViewById(R.id.fab);
 		fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -163,4 +166,34 @@ private void setAccounts(View accounts){
 				startActivity(intent);
 			}
 		});
+
+	TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabs);
+        tabLayout.addTab(tabLayout.newTab().setText("TODAY"));
+        tabLayout.addTab(tabLayout.newTab().setText("WEEK"));
+        tabLayout.addTab(tabLayout.newTab().setText("MONTH"));
+        tabLayout.addTab(tabLayout.newTab().setText("YEAR"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+	final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager);
+	final tabviewpager adapter = new tabviewpager
+			(getFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+		@Override
+		public void onTabSelected(TabLayout.Tab tab) {
+			viewPager.setCurrentItem(tab.getPosition());
+		}
+
+		@Override
+		public void onTabUnselected(TabLayout.Tab tab) {
+
+		}
+
+		@Override
+		public void onTabReselected(TabLayout.Tab tab) {
+
+		}
+	});
+}
 }
