@@ -48,19 +48,19 @@ public class LoginActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-		/*if(user!=null){
-			FirebaseAuth.getInstance().signOut();
-		}
-		getSupportActionBar().setTitle("Vendor Login/Signup");
+	//	if(user!=null){
+	//		FirebaseAuth.getInstance().signOut();
+	//	}
+	//	getSupportActionBar().setTitle("Vendor Login/Signup");
 		if (user != null) {
 			Intent intent = new Intent(this, MainActivity.class);
 			startActivity(intent);
-		} else {
+	//	} else {
 
 			setView();
-		}*/
-		setContentView(R.layout.activity_login);
-		setView();
+		}
+	//	setContentView(R.layout.activity_login);
+	//	setView();
 
 	}
 
